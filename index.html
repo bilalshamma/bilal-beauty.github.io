@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Bilal Beauty</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>💄 Bilal Beauty</h1>
+    <nav>
+      <ul>
+        <li><a href="#makeup">مكياج</a></li>
+        <li><a href="#perfumes">عطور</a></li>
+        <li><a href="#skincare">عناية بالبشرة</a></li>
+        <li><a href="#chargers">شواحن</a></li>
+        <li><a href="#stationery">قرطاسية</a></li>
+        <li><a href="#cart">🛒 (<span id="cart-count">0</span>)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- الأقسام -->
+  <section id="makeup">
+    <h2>✨ قسم المكياج</h2>
+    <div class="grid">
+      <div class="product" onclick="addToCart('كريم أساس مات')">كريم أساس مات</div>
+      <div class="product" onclick="addToCart('كونسيلر تغطية كاملة')">كونسيلر تغطية كاملة</div>
+      <div class="product" onclick="addToCart('بودرة مضغوطة')">بودرة مضغوطة</div>
+      <div class="product" onclick="addToCart('ماسكارا مقاومة للماء')">ماسكارا مقاومة للماء</div>
+    </div>
+  </section>
+
+  <section id="perfumes">
+    <h2>🌸 قسم العطور</h2>
+    <div class="grid">
+      <div class="product" onclick="addToCart('عطر شانيل كوكو')">عطر شانيل كوكو</div>
+      <div class="product" onclick="addToCart('عطر ديور سوفاج')">عطر ديور سوفاج</div>
+      <div class="product" onclick="addToCart('عطر فالنتينو دونا')">عطر فالنتينو دونا</div>
+      <div class="product" onclick="addToCart('عطر عود ملكي')">عطر عود ملكي</div>
+    </div>
+  </section>
+
+  <section id="skincare">
+    <h2>🧴 قسم العناية بالبشرة</h2>
+    <div class="grid">
+      <div class="product" onclick="addToCart('غسول وجه طبيعي')">غسول وجه طبيعي</div>
+      <div class="product" onclick="addToCart('كريم ترطيب ليلي')">كريم ترطيب ليلي</div>
+      <div class="product" onclick="addToCart('سيروم فيتامين C')">سيروم فيتامين C</div>
+    </div>
+  </section>
+
+  <section id="chargers">
+    <h2>🔌 قسم الشواحن</h2>
+    <div class="grid">
+      <div class="product" onclick="addToCart('شاحن سامسونغ سريع')">شاحن سامسونغ سريع</div>
+      <div class="product" onclick="addToCart('شاحن آيفون أصلي')">شاحن آيفون أصلي</div>
+      <div class="product" onclick="addToCart('شاحن لاسلكي')">شاحن لاسلكي</div>
+      <div class="product" onclick="addToCart('شاحن سيارة')">شاحن سيارة</div>
+    </div>
+  </section>
+
+  <section id="stationery">
+    <h2>✏️ قسم القرطاسية</h2>
+    <div class="grid">
+      <div class="product" onclick="addToCart('دفتر سلك 100 ورقة')">دفتر سلك 100 ورقة</div>
+      <div class="product" onclick="addToCart('أقلام حبر زرقاء')">أقلام حبر زرقاء</div>
+      <div class="product" onclick="addToCart('ألوان خشبية 12 لون')">ألوان خشبية 12 لون</div>
+      <div class="product" onclick="addToCart('ممحاة ناعمة')">ممحاة ناعمة</div>
+    </div>
+  </section>
+
+  <!-- السلة -->
+  <section id="cart">
+    <h2>🛍️ السلة</h2>
+    <ul id="cart-items"></ul>
+    <div id="phone-section">
+      <label for="phone">📱 أدخل رقم هاتفك لإتمام الطلب:</label><br>
+      <input type="tel" id="phone" placeholder="09xxxxxxxx">
+      <button onclick="sendWhatsApp()" id="whatsapp-button">📲 إرسال الطلب عبر واتساب</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Bilal Beauty – كل الحقوق محفوظة</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
